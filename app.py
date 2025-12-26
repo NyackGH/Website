@@ -9,6 +9,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 db = SQLAlchemy(app)
+with app.app_context():
+    db.create_all()  # This creates your .db file and all tables
 
 # 1. DATABASE MODEL
 # This defines what an "Image Post" looks like in our database
