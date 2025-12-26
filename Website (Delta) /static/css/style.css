@@ -1,0 +1,52 @@
+/* General Page Styling */
+body {
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+/* Post Container (The "Card") */
+.post-container {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 470px; /* Standard Instagram post width */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+/* Caption Section */
+.post-content {
+    padding: 12px;
+}
+
+.username {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #262626;
+}
