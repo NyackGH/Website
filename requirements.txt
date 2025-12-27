@@ -12,4 +12,5 @@ typing-extensions==4.13.2
 werkzeug==3.0.6
 zipp==3.20.2
 gunicorn
+psycopg2-binary
 cloudinary
