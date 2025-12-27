@@ -28,7 +28,7 @@ db = SQLAlchemy(app)
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     image_url = db.Column(db.String(500), nullable=False) # Stores the Cloudinary Link
-    caption = db.Column(db.String(200))
+    caption = db.Column(db.String(500))
     date_posted = db.Column(db.DateTime, default=datetime.utcnow)
 
 # This creates the tables in Neon automatically
