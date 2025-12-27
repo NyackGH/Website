@@ -20,7 +20,7 @@
 
     {% for post in posts %}
     <div class="post-container">
-        <img src="{{ url_for('static', filename='uploads/' + post.image_filename) }}" class="post-image">
+        <img src="{{ post.image_url }}" class="post-image">
         
         <div class="post-content">
             <span class="username">Nyack</span>
