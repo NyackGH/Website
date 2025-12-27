@@ -5,7 +5,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* This centers everything inside the body */
+    min-height: 100vh;
 }
 
 /* Navigation Bar */
@@ -17,6 +18,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 100; /* NEW: Ensures nav stays above images when scrolling */
 }
 
 /* Post Container (The "Card") */
@@ -24,21 +26,25 @@ nav {
     background-color: white;
     border: 1px solid #dbdbdb;
     margin-top: 20px;
-    width: 100%;
-    max-width: 470px; /* Standard Instagram post width */
+    margin-bottom: 20px; /* NEW: Adds space at the bottom of the feed */
+    width: 95%;          /* NEW: Leaves a tiny gap on mobile screens */
+    max-width: 470px;    /* This limits the width so images aren't massive */
     border-radius: 8px;
     overflow: hidden;
+    box-sizing: border-box; /* NEW: Prevents borders from making the box wider than 470px */
 }
 
 /* Image Styling */
 .post-image {
     width: 100%;
+    height: auto; /* NEW: Ensures the image maintains its shape */
     display: block;
 }
 
 /* Caption Section */
 .post-content {
     padding: 12px;
+    text-align: left; /* NEW: Ensures text stays aligned left inside the centered card */
 }
 
 .username {
@@ -49,4 +55,14 @@ nav {
 .caption {
     font-size: 14px;
     color: #262626;
+    line-height: 1.5; /* NEW: Makes long captions easier to read */
+}
+
+/* Profile Header Fix */
+/* NEW: Add this to make sure your top profile section is also centered */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
