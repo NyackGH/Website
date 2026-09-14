@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Upload - Nyack's Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload | Nyack Rivera</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+
     <nav>
-        <h2><a href="/" style="text-decoration: none; color: black;">Nyack's Projects</a></h2>
+        <a href="/">← Back to Projects</a>
     </nav>
 
-    <div class="post-container" style="padding: 20px;">
-        <h3>Create New Post</h3>
+    <div class="post-container" style="padding: 28px; margin-top: 40px;">
+        <h2 style="margin-bottom: 20px; font-weight: 600; font-size: 20px; color: #111;">Upload Project</h2>
         <form action="/nyack-upload" method="POST" enctype="multipart/form-data">
-            <p>Select Image:</p>
-            <input type="file" name="image" accept="image/*" required>
+            <label style="display: block; font-weight: 500; font-size: 14px; margin-bottom: 8px;">Project Image</label>
+            <input type="file" name="image" accept="image/*" required style="margin-bottom: 20px; display: block; width: 100%;">
             
-            <p>Caption:</p>
-            <textarea name="caption" placeholder="Write a caption..." rows="3" style="width: 100%;"></textarea>
+            <label style="display: block; font-weight: 500; font-size: 14px; margin-bottom: 8px;">Description / Caption</label>
+            <textarea name="caption" placeholder="Describe your mechanical engineering project or update..." rows="4" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 8px; box-sizing: border-box; font-family: inherit; font-size: 14px; resize: vertical;"></textarea>
             
-            <br><br>
-            <button type="submit" style="background-color: #0095f6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
-                Share Post
+            <button type="submit" style="margin-top: 20px; background-color: #0095f6; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; width: 100%;">
+                Publish Post
             </button>
         </form>
     </div>
-</body>
-</html>
+
 </body>
 </html>
