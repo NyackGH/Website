@@ -10,13 +10,13 @@ body {
   color: #fff;
 }
 
-/* Gold Art Deco metallic gradient background for header */
+/* Solid Art Deco Gold background for header */
 .header-section {
-  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  background-color: #CFA94A;
   padding: 40px 20px;
   text-align: center;
   color: #111;
-  border-bottom: 2px solid #8a641a;
+  border-bottom: 2px solid #9c7b31;
 }
 
 .header-section h1 {
@@ -37,6 +37,8 @@ body {
   object-fit: cover;
   border: 3px solid #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
 }
 
 /* Navigation Links */
