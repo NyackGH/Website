@@ -1,128 +1,53 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Gold Art Deco metallic gradient background for header */
+.header-section {
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  padding: 40px 20px;
+  text-align: center;
 }
 
-body {
-    background-color: #f8f9fa;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #212529;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+/* Side-by-side responsive grid layout for projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-nav {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e9ecef;
-    width: 100%;
-    padding: 14px 24px;
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+.project-card {
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-nav a {
-    text-decoration: none;
-    color: #495057;
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s ease;
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-nav a:hover {
-    color: #000000;
+/* Pop-up modal with scrollable content */
+.project-modal {
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto; /* Enables scrolling inside popup */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.profile-header {
-    text-align: center;
-    padding: 48px 20px 32px 20px;
-    background: #ffffff;
-    width: 100%;
-    border-bottom: 1px solid #e9ecef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.project-modal::backdrop {
+  background: rgba(0, 0, 0, 0.65);
 }
 
-.profile-avatar {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-
-.profile-name {
-    margin-top: 16px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a1a1a;
-    letter-spacing: -0.3px;
-}
-
-.profile-title {
-    color: #6c757d;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 4px;
-}
-
-.post-container {
-    background-color: #ffffff;
-    border: 1px solid #e9ecef;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    width: 92%;
-    max-width: 520px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post-container:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-}
-
-.post-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.post-content {
-    padding: 18px;
-    text-align: left;
-}
-
-.username {
-    font-weight: 600;
-    margin-right: 8px;
-    color: #111111;
-    font-size: 14px;
-}
-
-.caption {
-    font-size: 14px;
-    color: #333333;
-    line-height: 1.5;
-}
-
-.post-date {
-    display: block;
-    margin-top: 12px;
-    color: #adb5bd;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
+.close-btn {
+  float: right;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
