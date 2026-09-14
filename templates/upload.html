@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload | Nyack Rivera</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload | Nyack Rivera</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <nav>
-        <a href="/">← Back to Projects</a>
-    </nav>
+  <div class="profile-header">
+    <h1>Upload Project</h1>
+    <p>Add a new mechanical engineering post</p>
+  </div>
 
-    <div class="post-container" style="padding: 28px; margin-top: 40px;">
-        <h2 style="margin-bottom: 20px; font-weight: 600; font-size: 20px; color: #111;">Upload Project</h2>
-        <form action="/nyack-upload" method="POST" enctype="multipart/form-data">
-            <label style="display: block; font-weight: 500; font-size: 14px; margin-bottom: 8px;">Project Image</label>
-            <input type="file" name="image" accept="image/*" required style="margin-bottom: 20px; display: block; width: 100%;">
-            
-            <label style="display: block; font-weight: 500; font-size: 14px; margin-bottom: 8px;">Description / Caption</label>
-            <textarea name="caption" placeholder="Describe your mechanical engineering project or update..." rows="4" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 8px; box-sizing: border-box; font-family: inherit; font-size: 14px; resize: vertical;"></textarea>
-            
-            <button type="submit" style="margin-top: 20px; background-color: #0095f6; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; width: 100%;">
-                Publish Post
-            </button>
-        </form>
-    </div>
+  <div class="nav-links">
+    <a href="/">&larr; Back to Projects</a>
+  </div>
+
+  <div style="max-width: 600px; margin: 30px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <form action="/nyack-upload" method="POST" enctype="multipart/form-data">
+      <label style="display: block; margin-bottom: 8px; font-weight: 600;">Project Image</label>
+      <input type="file" name="image" accept="image/*" required style="margin-bottom: 20px; display: block; width: 100%;">
+
+      <label style="display: block; margin-bottom: 8px; font-weight: 600;">Description / Caption</label>
+      <textarea name="caption" placeholder="Describe your mechanical engineering project or update..." rows="5" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;"></textarea>
+
+      <button type="submit" style="margin-top: 20px; width: 100%; padding: 12px; background: linear-gradient(135deg, #bf953f 0%, #b38728 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Publish Post</button>
+    </form>
+  </div>
 
 </body>
 </html>
