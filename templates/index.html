@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyack Rivera | Projects</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+<!-- Art Deco Header -->
+<div class="header-section">
+  <img src="profile.jpg" alt="Nyack Rivera" class="profile-img">
+  <h1>Nyack Rivera</h1>
+  <p>Student of Mechanical Engineering</p>
+</div>
 
-    <div class="profile-header">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFOsIwu7wrfBQ/profile-displayphoto-scale_400_400/B4EZmin8sYKYAk-/0/1759370008963?e=1790812800&v=beta&t=t7u0idPVnPOW-uaKjkSDNibNf2scLGnZrAT8WT6RWvw" class="profile-avatar" alt="Nyack Rivera">
-        <h1 class="profile-name">Nyack Rivera</h1>
-        <p class="profile-title">Student of Mechanical Engineering</p>
-    </div>
+<!-- Side-by-Side Projects Container -->
+<div class="projects-grid">
+  <div class="project-card" onclick="openModal('modal-liberation')">
+    <img src="liberation-cover.jpg" alt="Liberation">
+  </div>
+  <!-- Add additional project cards here -->
+</div>
 
-    <nav>
-        <a href="/">Projects</a>
-        <a href="/nyack-upload" style="color: #0095f6;">+ New Post</a>
-    </nav>
+<!-- Scrollable Modal View -->
+<dialog id="modal-liberation" class="project-modal">
+  <button class="close-btn" onclick="closeModal('modal-liberation')">✕</button>
+  <h2>Liberation</h2>
+  <div class="modal-body">
+    <!-- Place full content, images, and long scrollable text here -->
+  </div>
+</dialog>
 
-    {% for post in posts %}
-    <div class="post-container">
-        <img src="{{ post.image_url }}" class="post-image" alt="Project Image">
-        <div class="post-content">
-            <span class="username">Nyack</span>
-            <span class="caption">{{ post.caption }}</span>
-            <span class="post-date">{{ post.date_posted.strftime('%B %d, %Y') }}</span>
-        </div>
-    </div>
-    {% endfor %}
-
-</body>
-</html>
+<script>
+  function openModal(id) {
+    document.getElementById(id).showModal();
+  }
+  
+  function closeModal(id) {
+    document.getElementById(id).close();
+  }
+</script>
